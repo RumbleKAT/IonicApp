@@ -1,0 +1,50 @@
+
+<ion-header>
+  <ion-navbar hide-tabs>
+    <ion-title>comments</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+
+  <ion-card>
+    <ion-item>
+        <ion-avatar item-left>
+          <img src="{{news_image}}"/>
+        </ion-avatar>
+        <h2>{{title}}</h2>
+        <p>{{publishedAt}}</p>
+      </ion-item>
+
+      <img src={{urlToImage}} (click)="launch(url)"/>
+
+      <ion-card-content>
+        {{description}}
+      </ion-card-content>
+    </ion-card>
+
+
+  <ion-card *ngFor="let post of posts">
+    <ion-item class="item-profile">
+      <ion-avatar item-left>
+        <img src="{{image}}"/>
+      </ion-avatar>
+      <p>{{post}}</p>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer keyboard-attach class="bar-assertive">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col width-90>
+        <ion-input [(ngModel)]="query" type="text" placeholder="Search..."></ion-input>
+      </ion-col>
+    <ion-col width-10>
+      <button end ion-button clear icon-only (click)="send()"><ion-icon name="send"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+  </ion-toolbar>
+</ion-footer>

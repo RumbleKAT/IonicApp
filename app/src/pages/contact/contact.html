@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        Add Item
+    </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Before</ion-label>
+        <ion-select [(ngModel)]="before">
+          <ion-option value="KRW" selected="true">Korean</ion-option>
+          <ion-option value="USD">English</ion-option>
+          <ion-option value="JPY">Japan</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>After</ion-label>
+        <ion-select [(ngModel)]="after">
+          <ion-option value="KRW" selected="true">Korean</ion-option>
+          <ion-option value="USD">English</ion-option>
+          <ion-option value="JPY">Japan</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+
+    <button full ion-button color="secondary" (click)="saveItem()">Save</button>
+
+</ion-content>

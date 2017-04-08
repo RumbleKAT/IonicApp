@@ -1,0 +1,44 @@
+page-comments {
+
+}
+
+
+.item-profile {
+  height: 40px;
+  .item-avatar > img:first-child {
+    max-width: 20px;
+    max-height: 20px;
+  }
+}
+.platform-ios .fixed-div {
+  right: 0;
+    bottom: 0;
+    margin-bottom: 42px;
+}
+
+.platform-android .fixed-div {
+  right: 0;
+    bottom: 0;
+    margin-bottom: 56px;
+}
+
+.platform-windows .fixed-div {
+  right: 0;
+    bottom: 0;
+}
+ion-card {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 25px;
+    position: relative;
+    top: -30px;
+}
+
+ion-card:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+ion-item {
+  background-color: #ffffff;
+}

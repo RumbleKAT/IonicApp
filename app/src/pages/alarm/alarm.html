@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar primary>
+    <ion-row>
+      <ion-col (click)="search(query)" width-10>
+        <button ion-button clear icon-only>
+          <ion-icon color="dark" name="search"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col width-90>
+        <ion-input [(ngModel)]="query" type="text" placeholder="Search..."></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen parallax-header>
+
+  <div class="header-image"></div>
+
+  <div class="main-content">
+  <ion-segment [(ngModel)]="category" >
+    <ion-segment-button value="BBC" (click)="select()" >
+      bbc-news
+    </ion-segment-button>
+    <ion-segment-button value="CNN" (click)="select()" >
+      cnn-news
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-card  *ngFor="let post of  posts">
+    <ion-item>
+        <ion-avatar item-left>
+          <img src="{{image}}"/>
+        </ion-avatar>
+        <h2>{{post.title}}</h2>
+        <p>{{post.publishedAt}}</p>
+      </ion-item>
+
+      <img src={{post.urlToImage}} (click)="launch(post.url)"/>
+
+      <ion-card-content>
+        {{post.description}}
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small (click)="setLikes(likes)" >
+            <ion-icon color={{mycolor}} name="thumbs-up"></ion-icon>
+            <div>{{post.likes}} Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small (click)="showComments(post)">
+            <ion-icon name="text"></ion-icon>
+            <div>{{comment_count}} Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+             {{times}} hours ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+  </ion-card>
+</div>
+</ion-content>
