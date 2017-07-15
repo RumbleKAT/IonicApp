@@ -9,11 +9,12 @@ import 'rxjs/add/operator/map';
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular 2 DI.
 */
+
 @Injectable()
 export class Data {
 
-  constructor(public http: Http, public storage:Storage) {
-    console.log('Hello Data Provider');
+  constructor(public storage:Storage) {
+
   }
 
   getData() {

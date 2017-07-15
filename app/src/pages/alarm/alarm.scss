@@ -11,7 +11,7 @@ page-alarm {
         }
 
         .scroll-content {
-            padding-top: 0 !important;
+            padding-top: 0;
         }
 
         ion-header {
@@ -31,7 +31,7 @@ page-alarm {
         }
 
         ion-segment-button {
-            border-color: map-get($colors, primary) !important;
+            //border-color: map-get($colors, primary) !important;
             color: #fff !important;
         }
 
@@ -39,9 +39,8 @@ page-alarm {
             background-color: #fff;
             width: 100%;
             margin: 0;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
-            top: -30px;
         }
 
         ion-card:last-of-type {

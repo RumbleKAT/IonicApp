@@ -28,6 +28,7 @@ export class AlarmPage {
   query;
   comment_count;
   likes;
+  search_url;
   mycolor:string;
 
   search_data;
@@ -40,17 +41,22 @@ export class AlarmPage {
     this.likes = 0;
     this.mycolor = "light";
 
-
     this.date = new Date().toString();
     var first = this.date.search(":");
     var nowTime = this.date.slice(first-2,first);
    this.times = nowTime;
-
     this.http.get('https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=b3c2e4d351ec4a56bf403743d6056888').map(res => res.json()).subscribe(data => {
         this.posts = data.articles;
     });
+    this.load();
     this.getComments();
 }
+
+ private load(){
+  console.log("dddd \n");
+}
+
+
   presentLoading() {
        let loader = this.loadingCtrl.create({
            content: "Please wait...",

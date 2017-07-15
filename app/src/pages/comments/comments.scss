@@ -1,7 +1,11 @@
+.ios, .md {
 page-comments {
 
 }
-
+.main-content {
+    background-color:  #737373;
+    box-shadow: 0px -1px 13px 1px rgba(0,0,0,0.3);
+}
 
 .item-profile {
   height: 40px;
@@ -26,19 +30,24 @@ page-comments {
   right: 0;
     bottom: 0;
 }
-ion-card {
+
+.card {
+  top: -40px;
+}
+
+ion-content {
     background-color: #ffffff;
     width: 100%;
     margin: 0;
     margin-bottom: 25px;
     position: relative;
-    top: -30px;
+    //top: -30px;
 }
-
-ion-card:last-of-type {
-    margin-bottom: 0 !important;
+ion-card-content{
+  background: #fff;
 }
 
 ion-item {
   background-color: #ffffff;
+}
 }

@@ -6,8 +6,7 @@
 </ion-header>
 
 
-<ion-content padding >
-
+<ion-content >
   <ion-card>
     <ion-item>
         <ion-avatar item-left>
@@ -33,17 +32,16 @@
       <p>{{post}}</p>
     </ion-item>
   </ion-card>
-
 </ion-content>
 
 <ion-footer keyboard-attach class="bar-assertive">
   <ion-toolbar>
     <ion-row>
       <ion-col width-90>
-        <ion-input [(ngModel)]="query" type="text" placeholder="Search..."></ion-input>
+        <ion-input [(ngModel)]="query" type="text" placeholder="Please Write..."></ion-input>
       </ion-col>
     <ion-col width-10>
-      <button end ion-button clear icon-only (click)="send()"><ion-icon name="send"></ion-icon></button>
+      <button ion-button clear icon-only (click)="send()"><ion-icon name="send"></ion-icon></button>
     </ion-col>
   </ion-row>
   </ion-toolbar>

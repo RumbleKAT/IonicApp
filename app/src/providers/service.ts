@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { IComment } from './interfaces';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
 import { AboutPage } from '../about/about';
 import { AlarmPage } from '../alarm/alarm';
-import {CommentsPage } from '../comments/comments';
+//import {CommentsPage } from '../comments/comments';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class TabsPage {
   // should be each tab's root Page
 
   tabs: any[] = [
-    { title: "Home", root: HomePage, icon: "home" },
+    { title: "Home", root: HomePage, icon: "add" },
     { title: "News", root: AlarmPage, icon: "notifications" },
     { title: "Alarm", root: AboutPage, icon: "bookmarks" }
   ];
