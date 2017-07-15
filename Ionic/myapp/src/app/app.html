@@ -1,0 +1,17 @@
+<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="icons" color="primary">
+    <ion-segment-button (click)="GoAlarm();" value="ios-alarm">
+      <ion-icon name="ios-alarm"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="ios-home">
+      <ion-icon name="ios-home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="ios-list-box">
+      <ion-icon name="ios-list-box"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+   </ion-toolbar>
+</ion-footer>
